@@ -7,6 +7,9 @@
   <version>1.01.01-SNAPSHOT</version>
   <name>squirrelFrontend Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+    <jettyVersion>9.2.2.v20140723</jettyVersion>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -17,5 +20,13 @@
   </dependencies>
   <build>
     <finalName>squirrelFrontend</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>${jettyVersion}</version>
+      </plugin>
+    </plugins>
   </build>
+
 </project>
